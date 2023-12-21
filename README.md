@@ -1,28 +1,28 @@
+Sure, here's a revised version:
+
+---
+
 **REST APIs for User Management**
 
 REST APIs for:
- - Register User (First Name, Last Name, Email, Phone)
- - Get User by ID
- - Update User (First Name, Last Name, Email, Phone)
- - Delete/Disable User
- - List All Users with filters (Filters: First Name, Last Name, Email, Phone)
-
+- Registering User (First Name, Last Name, Email, Phone)
+- Retrieving User by ID
+- Updating User (First Name, Last Name, Email, Phone)
+- Deleting/Disabling User
+- Listing All Users with filters (Filters: First Name, Last Name, Email, Phone)
 
 **Prerequisites**
 
-Node.js
- 
-npm 
-
+- Node.js
+- npm
 
 **Installation**
 
-git clone https://github.com/yourusername/your-repo-name.git
-
+```bash
+git clone https://github.com/satishmca2015/usermanagement.git
 cd usermanagement
-
 npm install
-
+```
 
 **Database Migration Steps**
 
@@ -32,15 +32,18 @@ Step 2: Add your database credentials and details to the `/config/config.json` f
 
 Step 3: Run the following command to create the database structure and migrate it to your local machine:
 
-        sequelize-cli db:migrate
-
+```bash
+sequelize-cli db:migrate
+```
 
 **Running the Application**
 
+```bash
 nodemon server.js
-
-OR
-
+# OR
 node server.js
+```
+
+---
 
 
