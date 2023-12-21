@@ -1,10 +1,13 @@
 const { User } = require("../models/index");
+const bcrypt = require('bcrypt');
 
 // add user
 const addUser = async (req, res) => {
   try {
-    const { firstname, lastname, email, mobile } = req.body;
-    let userInfo = { firstName: firstname, lastName: lastname, email, mobile };
+    const { firstname, lastname, email, mobile,password } = req.body;
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+    let userInfo = { firstName: firstname, lastName: lastname, email, mobile,password: hashedPassword };
     const user = await User.create(userInfo);
     if (user) {
       let resposne = {

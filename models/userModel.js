@@ -1,5 +1,3 @@
-
-
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     "User",
@@ -29,13 +27,12 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           notEmpty: {
             args: true,
-            msg: 'Email cannot be empty.' // Custom error message for notEmpty validation
+            msg: 'Email cannot be empty.'
           },
           isEmail: {
             args: true,
-            msg: 'Invalid email format.' // Custom error message for isEmail validation
-          },
-          // Add other validations and custom messages as needed
+            msg: 'Invalid email format.'
+          }
         }
       },
       mobile: {
@@ -52,6 +49,19 @@ module.exports = (sequelize, DataTypes) => {
           len: {
             args: [8, 15],
             msg: "Mobile number should be between 8 to 15 digits",
+          },
+        },
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Password is required",
+          },
+          len: {
+            args: [6, 100], 
+            msg: "Password should be at least 6 characters long",
           },
         },
       },

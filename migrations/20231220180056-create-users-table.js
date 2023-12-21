@@ -1,4 +1,4 @@
-// Example migration file (create-users-table.js)
+// Example migration file (update-users-table.js)
 'use strict';
 
 module.exports = {
@@ -27,10 +27,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      password: { // Add the password field
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       status: {
         type: Sequelize.STRING,
         allowNull: false,
-        defaultValue:1
+        defaultValue: 1,
       },
       createdAt: {
         type: Sequelize.DATE,
