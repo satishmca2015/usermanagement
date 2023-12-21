@@ -19,7 +19,7 @@ REST APIs for:
 **Installation**
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/satishmca2015/usermanagement.git
 cd usermanagement
 npm install
 ```
@@ -46,4 +46,4 @@ node server.js
 
 ---
 
-Ensure to replace placeholders like `yourusername`, `your-repo-name`, and adapt the instructions as per your specific application's needs.
+
