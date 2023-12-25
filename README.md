@@ -30,7 +30,12 @@ Step 1: Create a database named "usermanagement" on your local machine.
 
 Step 2: Add your database credentials and details to the `/config/config.json` file.
 
-Step 3: Run the following command to create the database structure and migrate it to your local machine:
+Step 3: Run the following command to intsall sequelize packge globally :
+```bash
+npm install -g sequelize-cli
+```
+
+Step 4: Run the following command to create the database structure and migrate it to your local machine:
 
 ```bash
 sequelize-cli db:migrate
